@@ -50,7 +50,45 @@ This creates an optimized production build in the `out/` directory.
 
 ## Deployment to Cloudflare Pages
 
-### Option 1: Via Cloudflare Dashboard (Recommended)
+### Automated Deployment (Recommended)
+
+This repository is configured with GitHub Actions to automatically deploy to Cloudflare Pages on every push to the `main` branch.
+
+#### Setup Instructions
+
+1. **Create a Cloudflare Pages Project**:
+   - Go to [Cloudflare Dashboard](https://dash.cloudflare.com)
+   - Navigate to Workers & Pages > Create application > Pages
+   - Create a new project named `tornado-alley` (or update the `projectName` in `.github/workflows/deploy.yml`)
+
+2. **Get your Cloudflare Account ID**:
+   - In your Cloudflare Dashboard, go to Workers & Pages
+   - Your Account ID is displayed in the right sidebar
+
+3. **Create a Cloudflare API Token**:
+   - Go to [Cloudflare API Tokens](https://dash.cloudflare.com/profile/api-tokens)
+   - Click "Create Token"
+   - Use the "Edit Cloudflare Workers" template or create a custom token with:
+     - Permissions: `Account.Cloudflare Pages — Edit`
+     - Account Resources: Include your account
+   - Click "Continue to summary" and "Create Token"
+   - **Copy the token** (you won't be able to see it again)
+
+4. **Add Secrets to GitHub**:
+   - Go to your GitHub repository settings
+   - Navigate to Settings > Secrets and variables > Actions
+   - Click "New repository secret" and add:
+     - Name: `CLOUDFLARE_API_TOKEN`, Value: [your API token from step 3]
+     - Name: `CLOUDFLARE_ACCOUNT_ID`, Value: [your account ID from step 2]
+
+5. **Deploy**:
+   - Push to the `main` branch or merge a pull request
+   - GitHub Actions will automatically build and deploy to Cloudflare Pages
+   - Check the "Actions" tab in your GitHub repository to monitor deployment progress
+
+### Manual Deployment Options
+
+#### Option 1: Via Cloudflare Dashboard
 
 1. Push your code to GitHub/GitLab
 2. Go to [Cloudflare Dashboard](https://dash.cloudflare.com)
@@ -62,7 +100,7 @@ This creates an optimized production build in the `out/` directory.
    - **Node version**: 20.9.0 or higher
 6. Deploy
 
-### Option 2: Via Wrangler CLI
+#### Option 2: Via Wrangler CLI
 
 1. Install Wrangler:
 
