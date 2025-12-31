@@ -50,7 +50,27 @@ This creates an optimized production build in the `out/` directory.
 
 ## Deployment to Cloudflare Pages
 
-### Option 1: Via Cloudflare Dashboard (Recommended)
+### Automated Deployment (GitHub Actions)
+
+This repository includes a GitHub Actions workflow that automatically deploys to Cloudflare Pages on every push to the `main` branch.
+
+#### Setup Required Secrets
+
+To enable automated deployments, add the following secrets to your GitHub repository:
+
+1. Go to your repository Settings > Secrets and variables > Actions
+2. Add the following secrets:
+   - **CLOUDFLARE_API_TOKEN**: Your Cloudflare API token
+     - Create at: Cloudflare Dashboard > My Profile > API Tokens
+     - Use the "Edit Cloudflare Pages" template or create a custom token with "Cloudflare Pages:Edit" permissions
+   - **CLOUDFLARE_ACCOUNT_ID**: Your Cloudflare Account ID
+     - Found at: Cloudflare Dashboard > Workers & Pages > Overview (right sidebar)
+
+Once configured, every push to `main` will automatically build and deploy your site.
+
+### Manual Deployment Options
+
+#### Option 1: Via Cloudflare Dashboard
 
 1. Push your code to GitHub/GitLab
 2. Go to [Cloudflare Dashboard](https://dash.cloudflare.com)
@@ -62,7 +82,7 @@ This creates an optimized production build in the `out/` directory.
    - **Node version**: 20.9.0 or higher
 6. Deploy
 
-### Option 2: Via Wrangler CLI
+#### Option 2: Via Wrangler CLI
 
 1. Install Wrangler:
 
