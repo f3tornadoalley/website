@@ -24,11 +24,11 @@ export default function Home() {
       />
       <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <main className="flex flex-col items-center justify-center gap-8 px-6 py-12 text-center">
-        {/* Logo/Image - Replace with your actual image */}
+        {/* Main Image */}
         <div className="relative h-64 w-64 overflow-hidden rounded-lg shadow-2xl">
           <Image
-            src="/tornado-alley-logo.png"
-            alt="Tornado Alley Logo"
+            src="https://pub-c59a7d8d850842288d7852af88d4ee66.r2.dev/images/2025_12_31_ground_zero.jpg"
+            alt="Tornado Alley Ground Zero"
             fill
             className="object-cover"
             priority
