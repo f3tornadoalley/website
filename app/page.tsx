@@ -22,7 +22,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="relative w-full bg-black">
+      <div className="relative w-full bg-black mb-0">
         {/* Hero Image Section - Reduced height */}
         <div className="relative w-full h-[50vh]">
           <Image
@@ -139,9 +139,9 @@ export default function Home() {
         </div>
 
         {/* 5 Core Principles Section */}
-        <div className="bg-white py-4 px-4">
+        <div className="bg-white py-2 px-4 pb-0">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4 pb-2">
               {/* Principle 1: Free of Charge */}
               <div className="flex flex-col items-center text-center">
                 <div className="mb-1.5 w-10 h-10 flex items-center justify-center">
