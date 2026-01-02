@@ -24,7 +24,7 @@ export default function Home() {
       />
       <div className="relative w-full bg-white">
         {/* Hero Image Section - Reduced height */}
-        <div className="relative w-full h-[50vh]">
+        <div className="relative w-full h-[45vh]">
           <Image
             src="https://pub-c59a7d8d850842288d7852af88d4ee66.r2.dev/images/2025_12_31_ground_zero.jpg"
             alt="Tornado Alley Ground Zero"
@@ -139,100 +139,100 @@ export default function Home() {
         </div>
 
         {/* 5 Core Principles Section */}
-        <div className="bg-white py-2 px-4 pb-0">
+        <div className="bg-white py-6 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4 pb-2">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
               {/* Principle 1: Free of Charge */}
               <div className="flex flex-col items-center text-center">
-                <div className="mb-1.5 w-10 h-10 flex items-center justify-center">
+                <div className="mb-3 w-16 h-16 flex items-center justify-center">
                   <Image
                     src="/images/principles/Free-of-charge.svg"
                     alt="Free of Charge"
-                    width={40}
-                    height={40}
+                    width={64}
+                    height={64}
                     unoptimized
                   />
                 </div>
-                <h3 className="text-sm font-bold mb-0.5 text-gray-800 font-(family-name:--font-titillium-web)">
+                <h3 className="text-base font-bold mb-1 text-gray-800 font-(family-name:--font-titillium-web)">
                   Free of Charge
                 </h3>
-                <p className="text-xs text-gray-600">
+                <p className="text-sm text-gray-600">
                   Never pay to workout
                 </p>
               </div>
 
               {/* Principle 2: Open to all Men */}
               <div className="flex flex-col items-center text-center">
-                <div className="mb-1.5 w-10 h-10 flex items-center justify-center">
+                <div className="mb-3 w-16 h-16 flex items-center justify-center">
                   <Image
                     src="/images/principles/Open-to-all-men.svg"
                     alt="Open to all Men"
-                    width={40}
-                    height={40}
+                    width={64}
+                    height={64}
                     unoptimized
                   />
                 </div>
-                <h3 className="text-sm font-bold mb-0.5 text-gray-800 font-(family-name:--font-titillium-web)">
+                <h3 className="text-base font-bold mb-1 text-gray-800 font-(family-name:--font-titillium-web)">
                   Open to all Men
                 </h3>
-                <p className="text-xs text-gray-600">
+                <p className="text-sm text-gray-600">
                   All are welcome
                 </p>
               </div>
 
               {/* Principle 3: Held Outdoors */}
               <div className="flex flex-col items-center text-center">
-                <div className="mb-1.5 w-10 h-10 flex items-center justify-center">
+                <div className="mb-3 w-16 h-16 flex items-center justify-center">
                   <Image
                     src="/images/principles/Held-outdoors.svg"
                     alt="Held Outdoors"
-                    width={40}
-                    height={40}
+                    width={64}
+                    height={64}
                     unoptimized
                   />
                 </div>
-                <h3 className="text-sm font-bold mb-0.5 text-gray-800 font-(family-name:--font-titillium-web)">
+                <h3 className="text-base font-bold mb-1 text-gray-800 font-(family-name:--font-titillium-web)">
                   Held Outdoors
                 </h3>
-                <p className="text-xs text-gray-600">
+                <p className="text-sm text-gray-600">
                   Rain or shine
                 </p>
               </div>
 
               {/* Principle 4: Peer Led */}
               <div className="flex flex-col items-center text-center">
-                <div className="mb-1.5 w-10 h-10 flex items-center justify-center">
+                <div className="mb-3 w-16 h-16 flex items-center justify-center">
                   <Image
                     src="/images/principles/Peer-led.svg"
                     alt="Peer Led"
-                    width={40}
-                    height={40}
+                    width={64}
+                    height={64}
                     unoptimized
                   />
                 </div>
-                <h3 className="text-sm font-bold mb-0.5 text-gray-800 font-(family-name:--font-titillium-web)">
+                <h3 className="text-base font-bold mb-1 text-gray-800 font-(family-name:--font-titillium-web)">
                   Peer Led
                 </h3>
-                <p className="text-xs text-gray-600">
+                <p className="text-sm text-gray-600">
                   Rotating leadership
                 </p>
               </div>
 
               {/* Principle 5: Ends with a COT */}
               <div className="flex flex-col items-center text-center">
-                <div className="mb-1.5 w-10 h-10 flex items-center justify-center">
+                <div className="mb-3 w-16 h-16 flex items-center justify-center">
                   <Image
                     src="/images/principles/Ends-in-a-COT.svg"
                     alt="Ends with a COT"
-                    width={40}
-                    height={40}
+                    width={64}
+                    height={64}
                     unoptimized
                   />
                 </div>
-                <h3 className="text-sm font-bold mb-0.5 text-gray-800 font-(family-name:--font-titillium-web)">
+                <h3 className="text-base font-bold mb-1 text-gray-800 font-(family-name:--font-titillium-web)">
                   Ends with a COT
                 </h3>
-                <p className="text-xs text-gray-600">
+                <p className="text-sm text-gray-600">
                   Circle of Trust
                 </p>
               </div>
