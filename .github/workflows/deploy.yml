@@ -47,7 +47,9 @@ jobs:
         with:
           script: |
             const branchName = '${{ github.head_ref }}';
-            const previewUrl = `https://${branchName}.tornado-alley.pages.dev`;
+            // Cloudflare Pages converts slashes to dashes in branch names for preview URLs
+            const sanitizedBranch = branchName.replace(/\//g, '-');
+            const previewUrl = `https://${sanitizedBranch}.tornado-alley.pages.dev`;
 
             github.rest.issues.createComment({
               issue_number: context.issue.number,
