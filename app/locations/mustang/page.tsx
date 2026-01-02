@@ -10,18 +10,18 @@ interface Workout {
   longitude: number;
 }
 
-export default function NormanPage() {
+export default function MustangPage() {
   const aos: Workout[] = [
     {
-      name: 'Later Rather Than Sooner',
-      address: '2501 Jenkins Ave, Norman, OK 73072',
+      name: 'The Corral',
+      address: 'Mustang, OK',
       schedule: [
+        { day: 'Wednesday', time: '0530-0615', type: 'Bootcamp' },
         { day: 'Saturday', time: '0600-0645', type: 'Bootcamp' },
       ],
-      notes: 'Meet in the parking lot south of the softball complex',
-      latitude: 35.1948247,
-      longitude: -97.4381404,
-      mapUrl: 'https://map.f3nation.com/?lat=35.1948247&lon=-97.4381404&zoom=15'
+      latitude: 35.4045401542569,
+      longitude: -97.72736293195,
+      mapUrl: 'https://map.f3nation.com/?lat=35.4045401542569&lon=-97.72736293195&zoom=15'
     },
   ];
 
@@ -53,10 +53,10 @@ export default function NormanPage() {
         </Link>
 
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-(family-name:--font-titillium-web)">
-          Norman
+          Mustang
         </h1>
         <p className="text-lg text-gray-600 mb-8">
-          {aos.length} workout location{aos.length !== 1 ? 's' : ''} in the Norman area
+          {aos.length} workout location{aos.length !== 1 ? 's' : ''} in the Mustang area
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
