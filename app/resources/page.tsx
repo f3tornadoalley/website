@@ -1,15 +1,14 @@
 export default function ResourcesPage() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 font-(family-name:--font-titillium-web)">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 font-(family-name:--font-titillium-web)">
           Resources
         </h1>
 
         <div className="prose prose-lg max-w-none">
-          <p className="text-lg text-gray-700 mb-8">
-            This is a placeholder page for F3 Tornado Alley resources.
-            Information about workouts, terminology, and other helpful resources will be added here.
+          <p className="text-base text-gray-700 mb-4">
+            Essential F3 resources for workouts, terminology, and leadership.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">

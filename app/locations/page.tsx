@@ -26,12 +26,12 @@ export default function LocationsPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-(family-name:--font-titillium-web)">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 font-(family-name:--font-titillium-web)">
           Locations
         </h1>
 
-        <p className="text-lg text-gray-700 mb-8">
+        <p className="text-base text-gray-700 mb-4">
           F3 Tornado Alley is made up of two regions across the Oklahoma City metro area.
         </p>
 
