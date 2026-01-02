@@ -27,13 +27,12 @@ export default function LocationsPage() {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 font-(family-name:--font-titillium-web)">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-(family-name:--font-titillium-web)">
           Locations
         </h1>
 
-        <p className="text-lg text-gray-700 mb-8 max-w-3xl">
+        <p className="text-lg text-gray-700 mb-8">
           F3 Tornado Alley is made up of two regions across the Oklahoma City metro area.
-          Explore the map below or select a region to find workout locations near you.
         </p>
 
         {/* Map and Regions Side by Side */}
