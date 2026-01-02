@@ -22,9 +22,9 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="relative w-full bg-white">
-        {/* Hero Image Section - 65% of viewport */}
-        <div className="relative w-full h-[65vh]">
+      <div className="relative w-full min-h-[calc(100vh-64px)] bg-white flex flex-col">
+        {/* Hero Image Section - fills available space minus principles section */}
+        <div className="relative w-full flex-1 min-h-[50vh]">
           <Image
             src="https://pub-c59a7d8d850842288d7852af88d4ee66.r2.dev/images/2025_12_31_ground_zero.jpg"
             alt="Tornado Alley Ground Zero"
@@ -138,8 +138,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* 5 Core Principles Section - 25% of viewport */}
-        <div className="bg-white py-3 px-4">
+        {/* 5 Core Principles Section */}
+        <div className="bg-white py-6 px-4 flex-shrink-0">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
               {/* Principle 1: Free of Charge */}
