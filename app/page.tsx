@@ -22,9 +22,9 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="relative min-h-screen w-full bg-black">
-        {/* Full-width Hero Image Section */}
-        <div className="relative w-full h-screen">
+      <div className="relative w-full bg-black">
+        {/* Hero Image Section - 85vh */}
+        <div className="relative w-full h-[85vh]">
           <Image
             src="https://pub-c59a7d8d850842288d7852af88d4ee66.r2.dev/images/2025_12_31_ground_zero.jpg"
             alt="Tornado Alley Ground Zero"
@@ -36,13 +36,16 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black"></div>
 
           {/* Content Overlay */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-            <h1 className="text-6xl font-bold text-white md:text-7xl lg:text-8xl xl:text-9xl mb-8 drop-shadow-2xl">
-              Welcome to Tornado Alley
-            </h1>
+          <div className="absolute inset-0 flex flex-col items-center px-6 text-center">
+            {/* Tornado Alley Heading - positioned higher */}
+            <div className="mt-[15vh]">
+              <h1 className="text-5xl font-bold text-white md:text-6xl lg:text-7xl xl:text-8xl drop-shadow-2xl">
+                Tornado Alley
+              </h1>
+            </div>
 
-            {/* Social Media Links */}
-            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mt-8">
+            {/* Social Media Links - positioned at bottom with padding */}
+            <div className="absolute bottom-32 md:bottom-36 left-0 right-0 flex flex-wrap items-center justify-center gap-4 md:gap-6 px-6">
               <a
                 href="https://www.facebook.com/f3tornadoalley"
                 target="_blank"
@@ -122,6 +125,117 @@ export default function Home() {
                 </svg>
                 <span className="font-medium">TikTok</span>
               </a>
+            </div>
+          </div>
+
+          {/* Mission Statement Callout - overlaying bottom of hero */}
+          <div className="absolute bottom-0 left-0 right-0 bg-white py-4 md:py-6 px-6">
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800 font-(family-name:--font-titillium-web)">
+                The Mission of F3 is to plant, grow and serve small workout groups for men for the invigoration of male community leadership.
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        {/* 5 Core Principles Section */}
+        <div className="bg-white py-8 px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-4">
+              {/* Principle 1: Free of Charge */}
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-3 w-14 h-14 flex items-center justify-center">
+                  <Image
+                    src="/images/principles/Free-of-charge.svg"
+                    alt="Free of Charge"
+                    width={56}
+                    height={56}
+                    unoptimized
+                  />
+                </div>
+                <h3 className="text-base font-bold mb-1 text-gray-800 font-(family-name:--font-titillium-web)">
+                  Free of Charge
+                </h3>
+                <p className="text-xs text-gray-600">
+                  Never pay to workout, ever
+                </p>
+              </div>
+
+              {/* Principle 2: Open to all Men */}
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-3 w-14 h-14 flex items-center justify-center">
+                  <Image
+                    src="/images/principles/Open-to-all-men.svg"
+                    alt="Open to all Men"
+                    width={56}
+                    height={56}
+                    unoptimized
+                  />
+                </div>
+                <h3 className="text-base font-bold mb-1 text-gray-800 font-(family-name:--font-titillium-web)">
+                  Open to all Men
+                </h3>
+                <p className="text-xs text-gray-600">
+                  No matter the man, you are welcome here
+                </p>
+              </div>
+
+              {/* Principle 3: Held Outdoors */}
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-3 w-14 h-14 flex items-center justify-center">
+                  <Image
+                    src="/images/principles/Held-outdoors.svg"
+                    alt="Held Outdoors"
+                    width={56}
+                    height={56}
+                    unoptimized
+                  />
+                </div>
+                <h3 className="text-base font-bold mb-1 text-gray-800 font-(family-name:--font-titillium-web)">
+                  Held Outdoors
+                </h3>
+                <p className="text-xs text-gray-600">
+                  Rain or shine, hot or cold, we are out there
+                </p>
+              </div>
+
+              {/* Principle 4: Peer Led */}
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-3 w-14 h-14 flex items-center justify-center">
+                  <Image
+                    src="/images/principles/Peer-led.svg"
+                    alt="Peer Led"
+                    width={56}
+                    height={56}
+                    unoptimized
+                  />
+                </div>
+                <h3 className="text-base font-bold mb-1 text-gray-800 font-(family-name:--font-titillium-web)">
+                  Peer Led
+                </h3>
+                <p className="text-xs text-gray-600">
+                  Leading each other in a rotating fashion
+                </p>
+              </div>
+
+              {/* Principle 5: Ends with a COT */}
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-3 w-14 h-14 flex items-center justify-center">
+                  <Image
+                    src="/images/principles/Ends-in-a-COT.svg"
+                    alt="Ends with a COT"
+                    width={56}
+                    height={56}
+                    unoptimized
+                  />
+                </div>
+                <h3 className="text-base font-bold mb-1 text-gray-800 font-(family-name:--font-titillium-web)">
+                  Ends with a COT
+                </h3>
+                <p className="text-xs text-gray-600">
+                  Always ends with a Circle of Trust
+                </p>
+              </div>
             </div>
           </div>
         </div>
