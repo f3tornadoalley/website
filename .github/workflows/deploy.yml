@@ -47,7 +47,9 @@ jobs:
         with:
           script: |
             const branchName = '${{ github.head_ref }}';
-            const previewUrl = `https://${branchName}.tornado-alley.pages.dev`;
+            // Replace slashes and other special characters with hyphens for valid URL
+            const sanitizedBranchName = branchName.replace(/\//g, '-').replace(/[^a-zA-Z0-9-]/g, '-').toLowerCase();
+            const previewUrl = `https://${sanitizedBranchName}.tornado-alley.pages.dev`;
 
             github.rest.issues.createComment({
               issue_number: context.issue.number,
