@@ -22,7 +22,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="relative w-full bg-black mb-0">
+      <div className="relative w-full bg-white">
         {/* Hero Image Section - Reduced height */}
         <div className="relative w-full h-[50vh]">
           <Image
