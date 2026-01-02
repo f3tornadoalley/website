@@ -2,16 +2,12 @@ export default function ResourcesPage() {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 font-(family-name:--font-titillium-web)">
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 font-(family-name:--font-titillium-web)">
           Resources
         </h1>
 
         <div className="prose prose-lg max-w-none">
-          <p className="text-base text-gray-700 mb-4">
-            Essential F3 resources for workouts, terminology, and leadership.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-gray-50 p-6 rounded-lg">
               <h2 className="text-2xl font-bold text-gray-900 mb-4 font-(family-name:--font-titillium-web)">
                 F3 Nation
