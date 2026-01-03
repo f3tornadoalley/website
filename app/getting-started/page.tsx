@@ -2,10 +2,6 @@ export default function GettingStartedPage() {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 font-(family-name:--font-titillium-web)">
-          Getting Started
-        </h1>
-
         <div className="prose prose-lg max-w-none">
           <div className="bg-gray-50 p-4 rounded-lg mb-6">
             <h2 className="text-xl font-bold text-gray-900 mb-2 font-(family-name:--font-titillium-web)">

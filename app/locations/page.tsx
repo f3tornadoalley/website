@@ -28,10 +28,6 @@ export default function LocationsPage() {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 font-(family-name:--font-titillium-web)">
-          Locations
-        </h1>
-
         {/* Map and Regions Side by Side */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-12">
           {/* F3 Nation Map Section - Takes up 2/3 on desktop */}
