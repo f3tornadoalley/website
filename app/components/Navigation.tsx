@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -30,8 +31,15 @@ export default function Navigation() {
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="text-white text-xl font-bold font-(family-name:--font-titillium-web) hover:text-gray-300 transition-colors"
+              className="flex items-center gap-3 text-white text-xl font-bold font-(family-name:--font-titillium-web) hover:text-gray-300 transition-colors"
             >
+              <Image
+                src="/images/logos/f3_tornado_alley_logo_compressed.jpg"
+                alt="Tornado Alley Logo"
+                width={40}
+                height={40}
+                className="rounded"
+              />
               Tornado Alley
             </Link>
           </div>
