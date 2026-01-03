@@ -45,7 +45,7 @@ export default function Home() {
             </div>
 
             {/* Social Media Links - positioned at bottom with padding */}
-            <div className="absolute bottom-28 sm:bottom-24 md:bottom-28 left-0 right-0 flex flex-wrap items-center justify-center gap-2 px-4 sm:px-6">
+            <div className="absolute bottom-20 sm:bottom-16 md:bottom-20 left-0 right-0 flex flex-wrap items-center justify-center gap-2 px-4 sm:px-6">
               <a
                 href="https://www.facebook.com/f3tornadoalley"
                 target="_blank"
