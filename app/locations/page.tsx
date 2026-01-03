@@ -13,7 +13,7 @@ export default function LocationsPage() {
     },
     {
       name: 'Boomtown',
-      description: 'OKC, Norman, Yukon, and Mustang area workout locations',
+      description: 'Mustang, Norman, OKC, and Yukon area workout locations',
       statsUrl: 'https://pax-vault.f3nation.com/stats/region/50857',
       regionInfoUrl: null,
       cities: [
