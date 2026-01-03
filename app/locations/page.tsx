@@ -1,4 +1,16 @@
+import type { Metadata } from "next";
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: "Workout Locations | Tornado Alley F3",
+  description: "Find F3 workout locations across the Oklahoma City metro area including Edmond, Mustang, Norman, OKC, and Yukon. View interactive map and workout schedules.",
+  keywords: ["F3 locations", "Oklahoma City workouts", "Edmond fitness", "Norman F3", "Mustang workouts", "Yukon fitness", "OKC F3"],
+  openGraph: {
+    title: "Workout Locations | Tornado Alley F3",
+    description: "Find F3 workout locations across the Oklahoma City metro area. Interactive map with workout times and locations.",
+    url: "https://tornadoalley.f3nation.com/locations",
+  },
+};
 
 export default function LocationsPage() {
   const regions = [

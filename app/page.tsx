@@ -7,13 +7,50 @@ export default function Home() {
     name: "Tornado Alley - F3",
     description: "A free fitness group dedicated to building stronger men through peer-led workouts, leadership development, and community service.",
     url: "https://tornadoalley.f3nation.com",
-    logo: "https://tornadoalley.f3nation.com/tornado-alley-logo.png",
+    logo: "https://tornadoalley.f3nation.com/images/logos/f3_tornado_alley_logo_compressed.jpg",
+    image: "https://tornadoalley.f3nation.com/images/logos/f3_tornado_alley_logo_compressed.jpg",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Oklahoma City",
+      addressRegion: "OK",
+      addressCountry: "US"
+    },
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Edmond"
+      },
+      {
+        "@type": "City",
+        name: "Oklahoma City"
+      },
+      {
+        "@type": "City",
+        name: "Norman"
+      },
+      {
+        "@type": "City",
+        name: "Yukon"
+      },
+      {
+        "@type": "City",
+        name: "Mustang"
+      }
+    ],
     sameAs: [
       "https://www.facebook.com/f3tornadoalley",
       "https://www.instagram.com/f3tornadoalley/",
       "https://x.com/f3tornadoalley",
       "https://www.tiktok.com/@f3tornadoalley",
     ],
+    foundingDate: "2016",
+    slogan: "The Mission of F3 is to plant, grow and serve small workout groups for men for the invigoration of male community leadership.",
+    knowsAbout: ["Fitness", "Community Leadership", "Outdoor Workouts", "Peer-Led Training"],
+    memberOf: {
+      "@type": "Organization",
+      name: "F3 Nation",
+      url: "https://f3nation.com"
+    }
   };
 
   return (

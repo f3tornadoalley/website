@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     siteName: "Tornado Alley",
     images: [
       {
-        url: "/tornado-alley-logo.png",
+        url: "/images/logos/f3_tornado_alley_logo_compressed.jpg",
         width: 1200,
-        height: 630,
-        alt: "Tornado Alley Logo",
+        height: 1200,
+        alt: "Tornado Alley F3 Logo",
       },
     ],
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Tornado Alley - F3 Fitness Community",
     description: "Welcome to Tornado Alley, a free fitness group dedicated to building stronger men through peer-led workouts, leadership development, and community service.",
-    images: ["/tornado-alley-logo.png"],
+    images: ["/images/logos/f3_tornado_alley_logo_compressed.jpg"],
     creator: "@f3tornadoalley",
   },
   robots: {

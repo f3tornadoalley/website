@@ -1,3 +1,16 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "F3 Resources | Tornado Alley",
+  description: "Access F3 Nation resources including the Lexicon (terminology), Exicon (exercise library), and Q Source (leadership guides) for Tornado Alley workouts.",
+  keywords: ["F3 resources", "F3 lexicon", "F3 exicon", "Q Source", "F3 terminology", "workout exercises"],
+  openGraph: {
+    title: "F3 Resources | Tornado Alley",
+    description: "Access F3 Nation resources, terminology, exercises, and leadership guides.",
+    url: "https://tornadoalley.f3nation.com/resources",
+  },
+};
+
 export default function ResourcesPage() {
   return (
     <div className="min-h-screen bg-white">

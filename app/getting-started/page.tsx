@@ -1,3 +1,16 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Getting Started | Tornado Alley F3",
+  description: "Join Tornado Alley F3 workouts. Learn what to expect, how to get started, and what to bring. Free, peer-led outdoor fitness for men in the Oklahoma City metro area.",
+  keywords: ["F3 getting started", "join F3", "free workout", "outdoor fitness", "Oklahoma City fitness", "mens workout group"],
+  openGraph: {
+    title: "Getting Started | Tornado Alley F3",
+    description: "Join Tornado Alley F3 workouts. Free, peer-led outdoor fitness for men. Learn how to get started today.",
+    url: "https://tornadoalley.f3nation.com/getting-started",
+  },
+};
+
 export default function GettingStartedPage() {
   return (
     <div className="min-h-screen bg-white">
