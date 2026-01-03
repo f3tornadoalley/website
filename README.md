@@ -1,19 +1,22 @@
 # Tornado Alley - F3 Website
 
-A modern, SEO-optimized splash page for Tornado Alley F3 fitness community, built with Next.js and deployed on Cloudflare Pages.
+A modern, SEO-optimized website for the Tornado Alley F3 fitness community, built with Next.js and deployed on Cloudflare Pages.
 
 ## Features
 
-- SEO optimized with comprehensive meta tags
-- Responsive design with Tailwind CSS
-- Social media integration (Facebook, Instagram, X, TikTok)
-- Structured data (JSON-LD) for better search engine understanding
-- Static export for optimal performance on Cloudflare Pages
-- Open Graph and Twitter Card support
+- **Multi-page site** with Getting Started, Locations, and Resources pages
+- **Location-specific pages** for Edmond, Mustang, Norman, Oklahoma City, and Yukon
+- **Interactive map integration** showing F3 workout locations
+- **SEO optimized** with comprehensive meta tags and structured data
+- **Responsive design** with Tailwind CSS v4
+- **Social media integration** (Facebook, Instagram, X, TikTok)
+- **Active navigation highlighting** to show current page
+- **Static export** for optimal performance on Cloudflare Pages
+- **Open Graph and Twitter Card** support
 
 ## Prerequisites
 
-- Node.js 20.9.0 or higher (required for Next.js 16)
+- Node.js 20.9.0 or higher (required for Next.js 15+)
 - npm, yarn, pnpm, or bun package manager
 
 ## Getting Started
@@ -26,17 +29,13 @@ A modern, SEO-optimized splash page for Tornado Alley F3 fitness community, buil
 npm install
 ```
 
-2. Add your logo image:
-   - Place your logo file as `public/tornado-alley-logo.png`
-   - Recommended size: 1200x630px for optimal social media sharing
-
-3. Run the development server:
+2. Run the development server:
 
 ```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) to view the site.
+3. Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 ### Building for Production
 
@@ -47,6 +46,27 @@ npm run build
 ```
 
 This creates an optimized production build in the `out/` directory.
+
+## Site Structure
+
+### Pages
+
+- **Home** (`/`) - Landing page with hero image, F3 mission statement, 5 core principles, and social media links
+- **Getting Started** (`/getting-started`) - Guide for newcomers with expectations and steps to join
+- **Locations** (`/locations`) - Interactive map and region information
+  - **Edmond** (`/locations/edmond`) - Tornado Alley region workouts
+  - **Mustang** (`/locations/mustang`) - Boomtown region workouts
+  - **Norman** (`/locations/norman`) - Boomtown region workouts
+  - **Oklahoma City** (`/locations/okc`) - Boomtown region workouts
+  - **Yukon** (`/locations/yukon`) - Boomtown region workouts
+- **Resources** (`/resources`) - Links to F3 Nation, Lexicon, Exicon, and Q Source
+
+### Navigation
+
+The site features a sticky navigation bar with:
+- Active page highlighting (bottom border on desktop, left border on mobile)
+- Mobile-responsive hamburger menu
+- Smooth transitions and hover effects
 
 ## Deployment to Cloudflare Pages
 
@@ -103,26 +123,63 @@ npm run build
 wrangler pages deploy out --project-name=tornado-alley
 ```
 
+## Image and Asset Management
+
+### Cloudflare R2 Storage
+
+Large images and media files are stored in Cloudflare R2 to keep the repository lightweight:
+
+- **Bucket**: `tornadoalley-website-assets`
+- **Public URL**: `https://pub-c59a7d8d850842288d7852af88d4ee66.r2.dev`
+
+To upload new images:
+
+```bash
+npx wrangler r2 object put tornadoalley-website-assets/images/[filename] --file [local-path]
+```
+
+Reference in code:
+
+```tsx
+<Image
+  src="https://pub-c59a7d8d850842288d7852af88d4ee66.r2.dev/images/[filename]"
+  alt="Description"
+  fill
+/>
+```
+
+### Local Public Assets
+
+Small files and icons are stored in the `public/` directory:
+
+- `/public/images/principles/` - F3 core principle icons (SVG)
+- `/public/favicon.ico` - Site favicon
+- `/public/apple-touch-icon.png` - Apple touch icon
+
 ## Customization
 
 ### Update Social Media Links
 
-Edit [app/page.tsx](app/page.tsx:26-123) to update social media URLs.
+Edit `app/page.tsx` (lines 50-131) to update social media URLs and buttons.
 
 ### Update SEO Metadata
 
-Edit [app/layout.tsx](app/layout.tsx:15-65) to customize:
+Edit `app/layout.tsx` (lines 22-72) to customize:
 - Page title and description
 - Keywords
 - Open Graph tags
 - Twitter Card metadata
 - Site verification codes (Google, etc.)
 
+### Update Location Data
+
+Edit location pages in `app/locations/[city]/page.tsx` to modify workout schedules and details.
+
 ### Styling
 
 The site uses Tailwind CSS v4. Modify styles in:
-- [app/page.tsx](app/page.tsx) - Component-level styling
-- [app/globals.css](app/globals.css) - Global styles
+- Component files (`app/**/page.tsx`) - Component-level styling
+- `app/globals.css` - Global styles and Tailwind imports
 
 ## SEO Features
 
@@ -134,34 +191,66 @@ This site includes:
 - **Structured Data**: JSON-LD schema for Organizations
 - **robots.txt**: Configured for proper indexing
 - **Semantic HTML**: Proper heading hierarchy and ARIA labels
-
-## Adding Analytics
-
-To add Google Analytics or other tracking:
-
-1. Add the tracking script to [app/layout.tsx](app/layout.tsx) in the `<head>` section
-2. Or use a Next.js analytics package like `@vercel/analytics` or `next-google-analytics`
+- **Active navigation**: Clear visual indication of current page
 
 ## Project Structure
 
 ```
 website/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # Automated Cloudflare deployment
 ├── app/
-│   ├── layout.tsx          # Root layout with SEO metadata
-│   ├── page.tsx            # Main splash page
-│   └── globals.css         # Global styles
+│   ├── components/
+│   │   └── Navigation.tsx      # Site navigation with active state
+│   ├── getting-started/
+│   │   └── page.tsx            # Getting Started page
+│   ├── locations/
+│   │   ├── edmond/
+│   │   │   └── page.tsx        # Edmond workouts
+│   │   ├── mustang/
+│   │   │   └── page.tsx        # Mustang workouts
+│   │   ├── norman/
+│   │   │   └── page.tsx        # Norman workouts
+│   │   ├── okc/
+│   │   │   └── page.tsx        # OKC workouts
+│   │   ├── yukon/
+│   │   │   └── page.tsx        # Yukon workouts
+│   │   └── page.tsx            # Locations index with map
+│   ├── resources/
+│   │   └── page.tsx            # Resources page
+│   ├── layout.tsx              # Root layout with SEO metadata
+│   ├── page.tsx                # Home page
+│   └── globals.css             # Global styles
 ├── public/
-│   └── tornado-alley-logo.png  # Your logo (add this)
-├── next.config.ts          # Next.js configuration
-└── package.json            # Project dependencies
+│   ├── images/
+│   │   └── principles/         # F3 principle icons
+│   ├── favicon.ico
+│   └── apple-touch-icon.png
+├── next.config.ts              # Next.js configuration
+├── package.json                # Project dependencies
+├── CLAUDE.md                   # Claude Code guidance
+└── README.md                   # This file
 ```
 
 ## Tech Stack
 
-- [Next.js 16](https://nextjs.org/) - React framework
-- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Next.js 15](https://nextjs.org/) - React framework
+- [React 19](https://react.dev/) - UI library
+- [TypeScript 5](https://www.typescriptlang.org/) - Type safety
 - [Tailwind CSS v4](https://tailwindcss.com/) - Styling
 - [Cloudflare Pages](https://pages.cloudflare.com/) - Hosting
+- [Cloudflare R2](https://www.cloudflare.com/products/r2/) - Asset storage
+
+## Development Commands
+
+```bash
+npm install          # Install dependencies
+npm run dev          # Start dev server at http://localhost:3000
+npm run build        # Build static site to out/ directory
+npm run start        # Start production server (after build)
+npm run lint         # Run ESLint
+```
 
 ## License
 
