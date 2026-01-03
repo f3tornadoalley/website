@@ -1,59 +1,59 @@
 export default function GettingStartedPage() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 font-(family-name:--font-titillium-web)">
           Getting Started
         </h1>
 
         <div className="prose prose-lg max-w-none">
-          <div className="bg-gray-50 p-8 rounded-lg mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 font-(family-name:--font-titillium-web)">
+          <div className="bg-gray-50 p-4 rounded-lg mb-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-2 font-(family-name:--font-titillium-web)">
               What to Expect
             </h2>
-            <p className="text-gray-700 mb-4">
+            <p className="text-gray-700 mb-0 text-base">
               F3 workouts are free, peer-led, and held outdoors in all weather conditions.
               No experience is necessary, and all fitness levels are welcome.
             </p>
           </div>
 
-          <div className="space-y-6">
-            <div className="border-l-4 border-blue-600 pl-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2 font-(family-name:--font-titillium-web)">
+          <div className="space-y-4">
+            <div className="border-l-4 border-blue-600 pl-4">
+              <h3 className="text-lg font-bold text-gray-900 mb-1 font-(family-name:--font-titillium-web)">
                 Step 1: Find a Workout
               </h3>
-              <p className="text-gray-700">
+              <p className="text-gray-700 text-base">
                 Browse our locations page to find a workout near you. Each location lists
                 meeting times and details.
               </p>
             </div>
 
-            <div className="border-l-4 border-blue-600 pl-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2 font-(family-name:--font-titillium-web)">
+            <div className="border-l-4 border-blue-600 pl-4">
+              <h3 className="text-lg font-bold text-gray-900 mb-1 font-(family-name:--font-titillium-web)">
                 Step 2: Just Show Up
               </h3>
-              <p className="text-gray-700">
+              <p className="text-gray-700 text-base">
                 No registration required. Simply show up at the designated time and location.
                 Introduce yourself and let us know you&apos;re new!
               </p>
             </div>
 
-            <div className="border-l-4 border-blue-600 pl-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2 font-(family-name:--font-titillium-web)">
+            <div className="border-l-4 border-blue-600 pl-4">
+              <h3 className="text-lg font-bold text-gray-900 mb-1 font-(family-name:--font-titillium-web)">
                 Step 3: Post Workout
               </h3>
-              <p className="text-gray-700">
+              <p className="text-gray-700 text-base">
                 After the workout, stick around for coffee and conversation. This is where
                 the real F3 experience happens.
               </p>
             </div>
           </div>
 
-          <div className="bg-blue-50 border-2 border-blue-200 p-6 rounded-lg mt-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 font-(family-name:--font-titillium-web)">
+          <div className="bg-blue-50 border-2 border-blue-200 p-4 rounded-lg mt-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-2 font-(family-name:--font-titillium-web)">
               What to Bring
             </h2>
-            <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <ul className="list-disc list-inside text-gray-700 space-y-1 text-base">
               <li>Athletic clothing appropriate for the weather</li>
               <li>Water bottle</li>
               <li>A positive attitude</li>
@@ -61,8 +61,8 @@ export default function GettingStartedPage() {
             </ul>
           </div>
 
-          <div className="mt-8 p-6 bg-gray-900 text-white rounded-lg">
-            <p className="text-lg mb-4">
+          <div className="mt-6 p-5 bg-gray-900 text-white rounded-lg">
+            <p className="text-lg mb-3">
               Ready to start? Find a workout location near you!
             </p>
             <a
