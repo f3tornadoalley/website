@@ -17,10 +17,10 @@ export default function LocationsPage() {
       statsUrl: 'https://pax-vault.f3nation.com/stats/region/50857',
       regionInfoUrl: null,
       cities: [
-        { name: 'Oklahoma City', path: '/locations/okc' },
+        { name: 'Mustang', path: '/locations/mustang' },
         { name: 'Norman', path: '/locations/norman' },
-        { name: 'Yukon', path: '/locations/yukon' },
-        { name: 'Mustang', path: '/locations/mustang' }
+        { name: 'Oklahoma City', path: '/locations/okc' },
+        { name: 'Yukon', path: '/locations/yukon' }
       ]
     }
   ];
