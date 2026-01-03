@@ -45,16 +45,16 @@ export default function Home() {
             </div>
 
             {/* Social Media Links - positioned at bottom with padding */}
-            <div className="absolute bottom-16 md:bottom-20 left-0 right-0 flex flex-wrap items-center justify-center gap-2 md:gap-3 px-6">
+            <div className="absolute bottom-20 sm:bottom-16 md:bottom-20 left-0 right-0 flex flex-wrap items-center justify-center gap-2 px-4 sm:px-6">
               <a
                 href="https://www.facebook.com/f3tornadoalley"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-1.5 rounded-full bg-blue-600 w-32 h-9 text-white transition-all hover:bg-blue-700 hover:scale-105 shadow-xl backdrop-blur-sm text-sm"
+                className="flex items-center justify-center gap-1 sm:gap-1.5 rounded-full bg-blue-600 w-[72px] sm:w-28 md:w-32 h-8 sm:h-9 text-white transition-all hover:bg-blue-700 hover:scale-105 shadow-xl backdrop-blur-sm text-xs sm:text-sm"
                 aria-label="Visit our Facebook page"
               >
                 <svg
-                  className="h-4 w-4"
+                  className="h-3.5 w-3.5 sm:h-4 sm:w-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -65,18 +65,19 @@ export default function Home() {
                     clipRule="evenodd"
                   />
                 </svg>
-                <span className="font-medium">Facebook</span>
+                <span className="font-medium hidden sm:inline">Facebook</span>
+                <span className="font-medium sm:hidden">FB</span>
               </a>
 
               <a
                 href="https://www.instagram.com/f3tornadoalley/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 w-32 h-9 text-white transition-all hover:from-purple-700 hover:to-pink-700 hover:scale-105 shadow-xl backdrop-blur-sm text-sm"
+                className="flex items-center justify-center gap-1 sm:gap-1.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 w-[72px] sm:w-28 md:w-32 h-8 sm:h-9 text-white transition-all hover:from-purple-700 hover:to-pink-700 hover:scale-105 shadow-xl backdrop-blur-sm text-xs sm:text-sm"
                 aria-label="Visit our Instagram page"
               >
                 <svg
-                  className="h-4 w-4"
+                  className="h-3.5 w-3.5 sm:h-4 sm:w-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -87,18 +88,19 @@ export default function Home() {
                     clipRule="evenodd"
                   />
                 </svg>
-                <span className="font-medium">Instagram</span>
+                <span className="font-medium hidden sm:inline">Instagram</span>
+                <span className="font-medium sm:hidden">IG</span>
               </a>
 
               <a
                 href="https://x.com/f3tornadoalley"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-1.5 rounded-full bg-white/10 backdrop-blur-sm w-32 h-9 text-white transition-all hover:bg-white/20 hover:scale-105 shadow-xl border border-white/20 text-sm"
+                className="flex items-center justify-center gap-1 sm:gap-1.5 rounded-full bg-white/10 backdrop-blur-sm w-[72px] sm:w-28 md:w-32 h-8 sm:h-9 text-white transition-all hover:bg-white/20 hover:scale-105 shadow-xl border border-white/20 text-xs sm:text-sm"
                 aria-label="Visit our X (Twitter) page"
               >
                 <svg
-                  className="h-4 w-4"
+                  className="h-3.5 w-3.5 sm:h-4 sm:w-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -112,18 +114,19 @@ export default function Home() {
                 href="https://www.tiktok.com/@f3tornadoalley"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-1.5 rounded-full bg-white/10 backdrop-blur-sm w-32 h-9 text-white transition-all hover:bg-white/20 hover:scale-105 shadow-xl border border-white/20 text-sm"
+                className="flex items-center justify-center gap-1 sm:gap-1.5 rounded-full bg-white/10 backdrop-blur-sm w-[72px] sm:w-28 md:w-32 h-8 sm:h-9 text-white transition-all hover:bg-white/20 hover:scale-105 shadow-xl border border-white/20 text-xs sm:text-sm"
                 aria-label="Visit our TikTok page"
               >
                 <svg
-                  className="h-4 w-4"
+                  className="h-3.5 w-3.5 sm:h-4 sm:w-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
                 >
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
                 </svg>
-                <span className="font-medium">TikTok</span>
+                <span className="font-medium hidden sm:inline">TikTok</span>
+                <span className="font-medium sm:hidden">TT</span>
               </a>
             </div>
           </div>
